@@ -1,5 +1,7 @@
 import Image from "next/image"
-import { LeftPart } from "../home/page";
+import Cursor from "@/app/components/cursor"
+import NavBar from "@/app/components/navBar"
+import HambMenu from "@/app/components/hambMenu"
 import bookImage from "@/app/assets/images/bookapp.png"
 import fitnessImage from "@/app/assets/images/fitness.png"
 import recipesImage from "@/app/assets/images/recipes.png"
@@ -7,7 +9,13 @@ import recipesImage from "@/app/assets/images/recipes.png"
 export default function RecentWork() {
   return (
     <>
-      <LeftPart />
+      <Cursor/>
+      <div className="mouse-cursor">
+          <div className="cursor-inner"></div>
+          <div className="cursor-outer"></div>
+      </div>
+      <NavBar />
+      <HambMenu />
       <div id="portfolio" className="kioto_tm_section">
         <div className="container">
           <div className="kioto_tm_portfolio">

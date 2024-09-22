@@ -3,7 +3,9 @@
 import Image from "next/image"
 import "../../components/styles.css"
 import { FormEvent, useState, ChangeEvent } from "react";
-import { LeftPart } from "../home/page";
+import NavBar from "@/app/components/navBar";
+import HambMenu from "@/app/components/hambMenu";
+import Cursor from "@/app/components/cursor";
 import { supabase } from "@/app/config/supabaseClient";
 import Input from "@/app/components/inputs";
 import locationImage from "@/app/assets/images/location.svg"
@@ -110,7 +112,13 @@ export default function ContactPage() {
 
   return (
     <>
-      <LeftPart />
+      <Cursor/>
+      <div className="mouse-cursor">
+          <div className="cursor-inner"></div>
+          <div className="cursor-outer"></div>
+      </div>
+      <NavBar />
+      <HambMenu/>
       <div id="contact" className="kioto_tm_section">
         <div className="container">
           <div className="kioto_tm_contact">

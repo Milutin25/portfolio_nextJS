@@ -1,10 +1,12 @@
 'use client'
 
-import Image from "next/image"
-import { LeftPart } from "../home/page";
 import "../../components/styles.css"
-import Progress from "@/app/components/progressbar";
 import { useState } from "react";
+import Image from "next/image"
+import Cursor from "@/app/components/cursor";
+import NavBar from "@/app/components/navBar";
+import HambMenu from "@/app/components/hambMenu";
+import Progress from "@/app/components/progressbar";
 import slavoImage from "@/app/assets/images/slavo.jpg"
 import natasaImage from "@/app/assets/images/natasa.jpg"
 import zikaImage from "@/app/assets/images/zika.jpg"
@@ -20,8 +22,13 @@ export default function About () {
 
   return (
     <>
-      <LeftPart />
-
+      <Cursor/>
+      <div className="mouse-cursor">
+          <div className="cursor-inner"></div>
+          <div className="cursor-outer"></div>
+      </div>
+      <NavBar />
+      <HambMenu/>
       <div id="about" className="kioto_tm_section">
         <div className="container">
           <div className="kioto_tm_about">
@@ -266,19 +273,19 @@ export default function About () {
                         <div className="kioto_tm_social">
                           <ul>
                             <li>
-                              <a href="#"><img className="svg" src={tiktokImage} alt="Tik-tok" /></a>
+                              <a href="#"><Image className="svg" src={tiktokImage} alt="Tik-tok" /></a>
                             </li>
                             <li>
-                              <a href="#"><img className="svg" src={twitterImage} alt="Twitter" /></a>
+                              <a href="#"><Image className="svg" src={twitterImage} alt="Twitter" /></a>
                             </li>
                             <li>
                               <a href="https://www.facebook.com/share/StB7JEqVEyCTHuMG/?mibextid=LQQJ4d">
-                                <img className="svg" src={facebookImage} alt="Facebook" />
+                                <Image className="svg" src={facebookImage} alt="Facebook" />
                               </a>
                             </li>
                             <li>
                               <a href="https://www.instagram.com/slavo_3?igsh=a2xzdDVyd3pnaDZw">
-                                <img className="svg" src={instagramImage} alt="Instagram" />
+                                <Image className="svg" src={instagramImage} alt="Instagram" />
                               </a>
                             </li>
                           </ul>
@@ -316,19 +323,19 @@ export default function About () {
                         <div className="kioto_tm_social">
                           <ul>
                             <li>
-                              <a href="#"><img className="svg" src={tiktokImage} alt="Tik-tok" /></a>
+                              <a href="#"><Image className="svg" src={tiktokImage} alt="Tik-tok" /></a>
                             </li>
                             <li>
-                              <a href="#"><img className="svg" src={twitterImage} alt="Twitter" /></a>
+                              <a href="#"><Image className="svg" src={twitterImage} alt="Twitter" /></a>
                             </li>
                             <li>
                               <a href="https://www.facebook.com/share/MjLSFpjszLZ8oaHv/?mibextid=LQQJ4d">
-                                <img className="svg" src={facebookImage} alt="Facebook" />
+                                <Image className="svg" src={facebookImage} alt="Facebook" />
                               </a>
                             </li>
                             <li>
                               <a href="https://www.instagram.com/markozivkovic1982?igsh=MWN5a21hbGl1b3BzNw==">
-                                <img className="svg" src={instagramImage} alt="Instagram" />
+                                <Image className="svg" src={instagramImage} alt="Instagram" />
                               </a>
                             </li>
                           </ul>
@@ -365,10 +372,10 @@ export default function About () {
                         <div className="kioto_tm_social">
                           <ul>
                             <li>
-                              <a href="#"><img className="svg" src={tiktokImage} alt="Tik-tok" /></a>
+                              <a href="#"><Image className="svg" src={tiktokImage} alt="Tik-tok" /></a>
                             </li>
                             <li>
-                              <a href="#"><img className="svg" src={twitterImage} alt="Twitter" /></a>
+                              <a href="#"><Image className="svg" src={twitterImage} alt="Twitter" /></a>
                             </li>
                             <li>
                               <a href="https://www.facebook.com/share/6E2BAACqnYahYkYk/?mibextid=LQQJ4d">
@@ -377,7 +384,7 @@ export default function About () {
                             </li>
                             <li>
                               <a href="https://www.instagram.com/natalystefanovic?igsh=NzJ2YWZrMWEwdzY1">
-                                <img className="svg" src={instagramImage} alt="Instagram" />
+                                <Image className="svg" src={instagramImage} alt="Instagram" />
                               </a>
                             </li>
                           </ul>

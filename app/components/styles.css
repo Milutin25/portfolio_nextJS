@@ -602,7 +602,7 @@ a{
 /*	03) KIOTO LEFTPART
 /*---------------------------------------------------*/
 
-.kioto_tm_all_wrap .leftpart{
+ .leftpart{
 	width: 400px;
 	height: 100vh;
 	position: fixed;
@@ -612,40 +612,40 @@ a{
 	padding: 0px 100px;
 	background-color: #444;;
 }
-.kioto_tm_all_wrap .leftpart_inner{
+ .leftpart_inner{
 	width: 100%;
 	height: auto;
 }
-.kioto_tm_all_wrap .leftpart .logo img{
+ .leftpart .logo img{
 	max-width: 150px;
 }
-.kioto_tm_all_wrap .leftpart .logo h3{
+ .leftpart .logo h3{
 	font-family: "Montserrat";
 	font-weight: 900;
 	font-size: 31px;
 	letter-spacing: 5px;
 	color: rgb(201, 193, 193);
 }
-.kioto_tm_all_wrap .leftpart .logo[data-type="image"] img{display: inline-block;}
-.kioto_tm_all_wrap .leftpart .logo[data-type="image"] h3{display: none;}
-.kioto_tm_all_wrap .leftpart .logo[data-type="text"] img{display: none;}
-.kioto_tm_all_wrap .leftpart .logo[data-type="text"] h3{display: inline-block;}
-.kioto_tm_all_wrap .leftpart .menu{
+.leftpart .logo[data-type="image"] img{display: inline-block;}
+.leftpart .logo[data-type="image"] h3{display: none;}
+.leftpart .logo[data-type="text"] img{display: none;}
+.leftpart .logo[data-type="text"] h3{display: inline-block;}
+.leftpart .menu{
 	padding: 50px 0px 50px 0px;
 	width: 100%;
 }
-.kioto_tm_all_wrap .leftpart .menu ul{
+ .leftpart .menu ul{
 	margin: 0px;
 	list-style-type: none;
 }
-.kioto_tm_all_wrap .leftpart .menu ul li{
+ .leftpart .menu ul li{
 	margin: 0px 0px 10px 0px;
 	width: 100%;
 }
-.kioto_tm_all_wrap .leftpart .menu ul li:last-child{
+ .leftpart .menu ul li:last-child{
 	margin-bottom: 0px;
 }
-.kioto_tm_all_wrap .leftpart .menu ul li a{
+.leftpart .menu ul li a{
 	color: var(--bc);
 	display: block;
 	font-weight: 500;
@@ -658,21 +658,21 @@ a{
 	     -o-transition: all .3s ease;
 	        transition: all .3s ease;
 }
-.kioto_tm_all_wrap .leftpart .menu ul li a:hover{
+ .leftpart .menu ul li a:hover{
 	color: #000;
 }
-.kioto_tm_all_wrap .leftpart .menu ul li.active a{
+ .leftpart .menu ul li.active a{
 	color: #c8bdbd;
 }
-.kioto_tm_all_wrap .leftpart .copyright{
+ .leftpart .copyright{
 	width: 100%;
 }
-.kioto_tm_all_wrap .leftpart .copyright p{
+.leftpart .copyright p{
 	font-size: 15px;
 	color: #999;
 	line-height: 25px;
 }
-.kioto_tm_all_wrap .leftpart .copyright a{
+.leftpart .copyright a{
 	color: var(--bc);
 	font-weight: 500;
 	
@@ -682,7 +682,7 @@ a{
 	     -o-transition: all .3s ease;
 	        transition: all .3s ease;
 }
-.kioto_tm_all_wrap .leftpart .copyright a:hover{
+p .leftpart .copyright a:hover{
 	color: #000;
 }
 .dark .kioto_tm_all_wrap .leftpart{
@@ -1618,7 +1618,7 @@ a{
 	.kioto_tm_mobile_menu.opened{display:none}
 	.container{max-width: 968px; display: flex; flex-wrap:wrap}
 	.kioto_tm_all_wrap .rightpart{padding-left: 350px;}
-	.kioto_tm_all_wrap .leftpart{width: 350px;padding: 0px 70px; background-color: #444;}
+	.leftpart{width: 350px;padding: 0px 70px; background-color: #444;}
 	.kioto_tm_home h3{font-size: 31px;}
 	.cd-headline.clip {display: inline-block; position: relative; font-size: 31px;}
 	.kioto_tm_home .abs_image{max-width: 75%;}
@@ -1635,7 +1635,7 @@ a{
 	.hamburger-inner:after {content: ""; position: absolute; top: 8px;}
 	.container{max-width: 100%;}
 	.kioto_tm_section{padding-left: 0px;}
-	.kioto_tm_all_wrap .leftpart{display: none;}
+	 .leftpart{display: none;}
 	.kioto_tm_all_wrap .rightpart{padding-left: 0px;}
 	.kioto_tm_all_wrap .rightpart_in{border-left: none;}
 	.kioto_tm_home{flex-direction: column-reverse;}
