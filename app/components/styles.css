@@ -19,6 +19,8 @@
 /*---------------------------------------------------*/
 /*	01) KIOTO BASE
 /*---------------------------------------------------*/
+   
+
 
 .details {
 	position: relative;
@@ -70,6 +72,7 @@
   
 
 
+  
 
 
 
@@ -319,7 +322,56 @@ img.svg{
 	padding:0px 20px;
 	position:relative;
 }
-
+.blogs {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between; 
+  }
+  
+  .blogs ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%; 
+  }
+  
+  .blogs li {
+	flex: 0 1 calc(50% - 10px); 
+	margin-bottom: 20px; 
+	transition: transform 0.3s, box-shadow 0.3s; 
+	flex-direction: column; 
+	text-align: center; 
+	padding: 25px; 
+	border: 1px solid #eaeaea; 
+	background-color: #fff; 
+  }
+  
+  .blogs li:hover {
+	transform: translateY(-5px); 
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .blogimg {
+	height: auto; 
+	display: inline;
+  }
+  
+  .blogs h2 {
+	margin: 10px 0; 
+	font-size: 1.5rem; 
+  }
+  
+  .blogs p {
+	color: #666; 
+  }
+  
+ 
+  @media (max-width: 768px) {
+	.blogs li {
+	  flex: 0 1 100%; 
+	}
+  }
+  
 h1, h2, h3, h4, h5, h6{
 	font-weight:600;
 	line-height: 1.3;
@@ -1673,6 +1725,7 @@ p .leftpart .copyright a:hover{
 	.kioto_tm_news .news_list .title{width: 100%;}
 	.kioto_tm_contact .info_list > ul > li{width: 50%;margin-bottom: 20px;}
 	.kioto_tm_section{left:0}  
+	.hover-text{display: none}
 }
 @media (max-width: 768px) {
 	.kioto_tm_home h3{font-size: 25px;}
@@ -1700,7 +1753,6 @@ p .leftpart .copyright a:hover{
 	.hamburger-inner:before {content: ""; position: absolute; top: -8px;}
 	.hamburger-inner:after {content: ""; position: absolute; top: 8px;}
 	.kioto_tm_section{left:0}  
-	.kioto_tm_service .services_list .kioto_tm_service {
-		width: 90%;
-	}
+	.kioto_tm_service .services_list .kioto_tm_service {width: 90%;}
+	.hover-text{display: none}
 }

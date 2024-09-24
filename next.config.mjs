@@ -2,8 +2,8 @@
 
 const nextConfig = {
     images: {
-        domains: ["cdn.sanity.io", "via.placeholder.com"], 
-    }
-};
-
-export default nextConfig;
+      domains: ["cdn.sanity.io", "via.placeholder.com"],
+    },
+  };
+  
+  export default nextConfig;

@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image"
-import "../../components/styles.css"
+import "../components/styles.css"
 import { FormEvent, useState, ChangeEvent } from "react";
 import NavBar from "@/app/components/navBar";
 import HambMenu from "@/app/components/hambMenu";
