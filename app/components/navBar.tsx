@@ -1,5 +1,5 @@
 import Link from "next/link";
-import "../components/styles.css"
+import "@/app/components/styles.css"
 
 export default function NavBar() {
     return (
@@ -16,16 +16,16 @@ export default function NavBar() {
                 <Link href="/">Home</Link>
               </li>
               <li>
-                <Link href="/about">About</Link>
+                <Link href="/pages/about">About</Link>
               </li>
               <li>
-                <Link href="/recentWork">Recent Work</Link>
+                <Link href="/pages/recentWork">Recent Work</Link>
               </li>
               <li>
-                <Link href="/blogs">Blog</Link>
+                <Link href="/pages/blogs">Blog</Link>
               </li>
               <li>
-                <Link href="/contact">Contact</Link>
+                <Link href="/pages/contact">Contact</Link>
               </li>
             </ul>
           </div>

@@ -1,9 +1,9 @@
 import { defineQuery } from "next-sanity";
-import { client } from "../sanity/client";
+import { client } from "@/app/sanity/client";
 import Cursor from "@/app/components/cursor";
-import NavBar from "../components/navBar";
-import HambMenu from "../components/hambMenu";
-import { FilterBlogs } from "../components/filterBlogs";
+import NavBar from "@/app/components/navBar";
+import HambMenu from "@/app/components/hambMenu";
+import { FilterBlogs } from "@/app/components/filterBlogs";
 
 interface Blog {
   _id: string; 

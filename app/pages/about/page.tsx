@@ -1,6 +1,5 @@
 'use client'
 
-import "../components/styles.css"
 import { useState } from "react";
 import Image from "next/image"
 import Cursor from "@/app/components/cursor";

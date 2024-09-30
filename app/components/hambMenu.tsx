@@ -30,10 +30,10 @@ export default function HambMenu() {
         <div className="menu_list">
           <ul className="transition_link">
             <li><Link href="/">Home</Link></li>
-            <li><Link href="/about">About</Link></li>
-            <li><Link href="/recentWork">Recent Work</Link></li>
-            <li><Link href="/blogs">Blog</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
+            <li><Link href="/pages/about">About</Link></li>
+            <li><Link href="/pages/recentWork">Recent Work</Link></li>
+            <li><Link href="/pages/blogs">Blog</Link></li>
+            <li><Link href="/pages/contact">Contact</Link></li>
           </ul>
         </div>
       </div>
