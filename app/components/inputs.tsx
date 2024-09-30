@@ -1,6 +1,6 @@
 'use client'
 
-import { ChangeEvent, CSSProperties, FC } from "react"
+import { ChangeEvent, CSSProperties } from "react"
 
 interface InputProps {
     type: string, 

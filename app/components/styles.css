@@ -317,11 +317,15 @@ img.svg{
 }
 .tag {
 	display: inline-block;
-	background-color: #e0e0e0; /* Change to your preferred color */
+	background-color: #e0e0e0; 
 	border-radius: 4px;
 	padding: 5px 10px;
 	margin-right: 5px;
 	font-size: 0.9em;
+}
+.tag:hover {
+    background-color: #d1d1d1; 
+    cursor: pointer; 
 }
 .container{
 	max-width: 1240px;
