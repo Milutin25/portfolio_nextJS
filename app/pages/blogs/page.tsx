@@ -1,12 +1,12 @@
 import { defineQuery } from "next-sanity";
-import { client } from "@/app/sanity/client";
+import { client } from "@/app/lib/sanity/client";
 import Cursor from "@/app/components/cursor";
 import NavBar from "@/app/components/navBar";
 import HambMenu from "@/app/components/hambMenu";
 import { FilterBlogs } from "@/app/components/filterBlogs";
 
 interface Blog {
-  _id: string; 
+  _id: string;
   image: {
     asset: {
       _id: string;
@@ -40,9 +40,21 @@ const TAG_QUERY = (tag: string) => {
 
 export default async function IndexPage() {
   const allBlogs: Blog[] = await client.fetch(BLOG_QUERY, {}, options);
-  const frontEndBlogs: Blog[] = await client.fetch(TAG_QUERY("Front End"), { tags: "Front End" }, options);
-  const typeScriptBlogs: Blog[] = await client.fetch(TAG_QUERY("TypeScript"), { tags: "TypeScript" }, options);
-  const htmlBlogs: Blog[] = await client.fetch(TAG_QUERY("HTML"), { tags: "HTML" }, options);
+  const frontEndBlogs: Blog[] = await client.fetch(
+    TAG_QUERY("Front End"),
+    { tags: "Front End" },
+    options
+  );
+  const typeScriptBlogs: Blog[] = await client.fetch(
+    TAG_QUERY("TypeScript"),
+    { tags: "TypeScript" },
+    options
+  );
+  const htmlBlogs: Blog[] = await client.fetch(
+    TAG_QUERY("HTML"),
+    { tags: "HTML" },
+    options
+  );
 
   return (
     <>

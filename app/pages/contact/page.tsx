@@ -1,25 +1,26 @@
-'use client'
+"use client";
 
-import Image from "next/image"
+import Image from "next/image";
 import { FormEvent, useState, ChangeEvent } from "react";
 import NavBar from "@/app/components/navBar";
 import HambMenu from "@/app/components/hambMenu";
 import Cursor from "@/app/components/cursor";
-import { supabase } from "@/app/config/supabaseClient";
+import { createClient } from "@/app/lib/supabase/supabaseClient";
 import Input from "@/app/components/inputs";
-import locationImage from "@/app/assets/images/location.svg"
-import callImage from "@/app/assets/images/call.svg"
-import emailImage from "@/app/assets/images/mail-2.svg"
-import twitterImage from "@/app/assets/images/twitter.svg"
-import instagramImage from "@/app/assets/images/instagram.svg"
-import facebookImage from "@/app/assets/images/facebook.svg"
-import socialImage from "@/app/assets/images/social.svg"
+import locationImage from "@/app/assets/images/location.svg";
+import callImage from "@/app/assets/images/call.svg";
+import emailImage from "@/app/assets/images/mail-2.svg";
+import twitterImage from "@/app/assets/images/twitter.svg";
+import instagramImage from "@/app/assets/images/instagram.svg";
+import facebookImage from "@/app/assets/images/facebook.svg";
+import socialImage from "@/app/assets/images/social.svg";
 
 export default function ContactPage() {
+  const supabase = createClient();
 
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
-  const [phone, setPhone] = useState<string>(""); 
+  const [phone, setPhone] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const [errorMessage, setError] = useState<string | null>(null);
   const [successMessage, setSuccess] = useState<string | null>(null);
@@ -31,7 +32,7 @@ export default function ContactPage() {
   });
 
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
-  const disabled = name && email && phone && message; 
+  const disabled = name && email && phone && message;
 
   const updateName = (e: ChangeEvent<HTMLInputElement>): void => {
     const usersName = e.target.value;
@@ -46,7 +47,7 @@ export default function ContactPage() {
   const updatePhone = (e: ChangeEvent<HTMLInputElement>): void => {
     const usersPhone = e.target.value;
     if (usersPhone === "" || !isNaN(Number(usersPhone))) {
-      setPhone(usersPhone); 
+      setPhone(usersPhone);
     }
   };
 
@@ -89,7 +90,9 @@ export default function ContactPage() {
       } else {
         setIsSubmitted(true);
         console.log("Data:", data);
-        setSuccess("Thanks for reaching out. Your message has been sent successfully!");
+        setSuccess(
+          "Thanks for reaching out. Your message has been sent successfully!"
+        );
         setError(null);
         setName("");
         setEmail("");
@@ -111,13 +114,13 @@ export default function ContactPage() {
 
   return (
     <>
-      <Cursor/>
+      <Cursor />
       <div className="mouse-cursor">
-          <div className="cursor-inner"></div>
-          <div className="cursor-outer"></div>
+        <div className="cursor-inner"></div>
+        <div className="cursor-outer"></div>
       </div>
       <NavBar />
-      <HambMenu/>
+      <HambMenu />
       <div id="contact" className="kioto_tm_section">
         <div className="container">
           <div className="kioto_tm_contact">
@@ -161,7 +164,11 @@ export default function ContactPage() {
                 </li>
                 <li>
                   <div className="list_inner">
-                    <Image className="svg icon" src={socialImage} alt="Social" />
+                    <Image
+                      className="svg icon"
+                      src={socialImage}
+                      alt="Social"
+                    />
                     <div className="kioto_tm_social">
                       <ul>
                         <li>
@@ -306,4 +313,4 @@ export default function ContactPage() {
       </div>
     </>
   );
-};
+}
