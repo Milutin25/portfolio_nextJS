@@ -5,7 +5,7 @@ import { FormEvent, useState, ChangeEvent } from "react";
 import NavBar from "@/app/components/navBar";
 import HambMenu from "@/app/components/hambMenu";
 import Cursor from "@/app/components/cursor";
-import { createClient } from "@/app/lib/supabase/supabaseClient";
+import { createClient } from "@/app/lib/supabase/client";
 import Input from "@/app/components/inputs";
 import locationImage from "@/app/assets/images/location.svg";
 import callImage from "@/app/assets/images/call.svg";

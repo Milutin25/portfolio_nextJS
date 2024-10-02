@@ -19,7 +19,83 @@
 /*---------------------------------------------------*/
 /*	01) KIOTO BASE
 /*---------------------------------------------------*/
-   
+
+/*LOGIN PAGE*/
+
+.pageWrapper {
+	display: flex;
+	justify-content: center; /* Centers horizontally */
+	align-items: center; /* Centers vertically */
+	height: 100vh; /* Full viewport height */
+  }
+  
+.formWrapper {
+	display: flex;
+	flex-direction: column;
+	width:400px;
+	max-width: 600px; /* Limit the form's width */
+	padding: 20px;
+	margin: 100px ; /* Center the form horizontally */
+	border: 1px solid rgba(0, 0, 0, 0.1); /* Box border */
+	box-sizing: border-box; /* Ensures padding and borders are included in the element's width/height */
+	background-color: #f9f9f9; /* Light background for contrast */
+  }
+  
+  .label {
+	font-family: var(--bff);
+	margin-bottom: 8px;
+	color: #333; /* Adjust as needed */
+  }
+  
+  .loginInput {
+	padding: 20px;
+	background-color: transparent;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	font-family: var(--bff);
+	margin-bottom: 20px;
+	height: 60px; /* Adjust height if needed */
+	font-size: 16px; /* Adjust text size */
+	outline: none;
+	transition: border-color 0.3s;
+  }
+  
+  .loginInput:focus {
+	border-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .buttonWrapper {
+	display: flex;
+	gap: 10px; /* Spacing between buttons */
+	justify-content: center;
+  }
+  
+  .loginButton {
+	padding: 15px 30px;
+	background-color: #333;
+	color: white;
+	border: none;
+	cursor: pointer;
+	font-family: var(--bff);
+	font-size: 16px;
+	transition: background-color 0.3s;
+  }
+  
+  .loginButton:hover {
+	background-color: #555; /* Adjust hover color as needed */
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .details {
