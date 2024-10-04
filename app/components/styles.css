@@ -24,6 +24,7 @@
 
 .pageWrapper {
 	display: flex;
+	flex-direction: column;
 	justify-content: center; /* Centers horizontally */
 	align-items: center; /* Centers vertically */
 	height: 100vh; /* Full viewport height */
@@ -84,8 +85,6 @@
 	background-color: #555; /* Adjust hover color as needed */
   }
   
-
-
 
 
 
@@ -1784,9 +1783,8 @@ p .leftpart .copyright a:hover{
 	.kioto_tm_all_wrap .rightpart{padding-left: 0px;}
 	.kioto_tm_all_wrap .rightpart_in{border-left: none;}
 	.kioto_tm_home{flex-direction: column-reverse;}
-	.kioto_tm_home .right{width: 100%;padding-left: 0px;margin-bottom: 50px;}
+	.kioto_tm_home .right{padding-left: 0px;margin-bottom: 50px;}
 	.kioto_tm_home .abs_image{max-width: 300px;}
-	.kioto_tm_home .left{width: 100%;}
 	.kioto_tm_home .name{font-size: 14px;}
 	.kioto_tm_home h3{font-size: 35px;}
 	.kioto_tm_home .abs_image{transform: rotate(0deg) !important;}

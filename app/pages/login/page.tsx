@@ -6,6 +6,22 @@ import { login, signup } from "./actions";
 import NavBar from "@/app/components/navBar";
 
 export default function LoginPage() {
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleLogin = async (formData: FormData) => {
+    const result = await login(formData);
+    if (result.error) {
+      setErrorMessage(result.error);
+    }
+  };
+
+  const handleSignup = async (formData: FormData) => {
+    const result = await signup(formData);
+    if (result.error) {
+      setErrorMessage(result.error);
+    }
+  };
+
   return (
     <>
       <NavBar />
@@ -36,15 +52,19 @@ export default function LoginPage() {
             required
           />
           <div className="buttonWrapper">
-            <button formAction={login} className="loginButton">
+            <button formAction={handleLogin} className="loginButton">
               Log in
             </button>
-            <button formAction={signup} className="loginButton">
+            <button formAction={handleSignup} className="loginButton">
               Sign up
             </button>
           </div>
         </form>
-        {!login && <p>Login unsuccessful!</p>}
+        {errorMessage && (
+          <div className="error-message">
+            <p className="font-mono text-2xl">{errorMessage}</p>
+          </div>
+        )}
       </div>
     </>
   );

@@ -16,7 +16,7 @@ export async function login(formData: FormData) {
   const { error } = await supabase.auth.signInWithPassword(data)
 
   if (error) {
-    redirect('/pages/error')  // what should happen if the login is not successful? 
+   return { error: '! Invalid login credentials !' } 
   }
 
   revalidatePath('/', 'layout')
@@ -34,9 +34,9 @@ export async function signup(formData: FormData) {
   const { error } = await supabase.auth.signUp(data)
 
   if (error) {
-    redirect('/error') // what should happen if the login is not successful? 
+    return { error: '!The account with this email/password already exists!' }  
 }
 
   revalidatePath('/', 'layout')
-  redirect('/')  // // what should happen if the login is successful? 
+  redirect('/')  // // what should happen if the signup is successful? 
 }

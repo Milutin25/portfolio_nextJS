@@ -1,5 +1,6 @@
 import Link from "next/link";
 import "@/app/components/styles.css";
+import { logout } from "../pages/logout/actions";
 
 export default function NavBar() {
   return (
@@ -29,6 +30,13 @@ export default function NavBar() {
             </li>
             <li>
               <Link href="/pages/login">Login</Link>
+            </li>
+            <li>
+              <form action={logout}>
+                <button type="submit" formAction={logout}>
+                  Logout
+                </button>
+              </form>
             </li>
           </ul>
         </div>
