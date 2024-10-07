@@ -7,6 +7,7 @@ import NavBar from "./components/navBar";
 import TypeAnimation from "./components/typeAnimation";
 import HambMenu from './components/hambMenu';
 import Cursor from "./components/cursor";
+import DisplayEmail from "./components/displayEmail";
 
 
 export default function Page() {
@@ -43,6 +44,7 @@ export default function Page() {
           <div className="cursor-outer"></div>
         </div>
         <NavBar/>
+        <DisplayEmail/>
       <div className="rightpart">
       <div className="rightpart_in">
         <div id="home" className="kioto_tm_section animated">

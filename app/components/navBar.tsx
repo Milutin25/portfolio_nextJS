@@ -1,8 +1,36 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import "@/app/components/styles.css";
-import { logout } from "../pages/logout/actions";
+import { createClient } from "../lib/supabase/client";
 
 export default function NavBar() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const checkUserSession = async () => {
+      const supabase = createClient();
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+      if (user && user.id) {
+        setIsLoggedIn(true);
+      }
+    };
+
+    checkUserSession();
+  }, []);
+
+  const handleLogout = async () => {
+    const supabase = createClient();
+    const { error } = await supabase.auth.signOut();
+    
+    if (!error) {
+    setIsLoggedIn(false)
+}
+  }
+
   return (
     <div className="leftpart">
       <div className="leftpart_inner">
@@ -28,16 +56,16 @@ export default function NavBar() {
             <li>
               <Link href="/pages/contact">Contact</Link>
             </li>
-            <li>
-              <Link href="/pages/login">Login</Link>
-            </li>
-            <li>
-              <form action={logout}>
-                <button type="submit" formAction={logout}>
-                  Logout
-                </button>
-              </form>
-            </li>
+            {!isLoggedIn && (
+              <li>
+                <Link href="/pages/login">Login</Link>
+              </li>
+            )}
+            {isLoggedIn && (
+              <li>
+                <button onClick={handleLogout}>Logout</button>
+              </li>
+            )}
           </ul>
         </div>
         <div className="copyright">

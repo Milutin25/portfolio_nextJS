@@ -14,6 +14,7 @@ import twitterImage from "@/app/assets/images/twitter.svg";
 import instagramImage from "@/app/assets/images/instagram.svg";
 import facebookImage from "@/app/assets/images/facebook.svg";
 import socialImage from "@/app/assets/images/social.svg";
+import DisplayEmail from "@/app/components/displayEmail";
 
 export default function ContactPage() {
   const supabase = createClient();
@@ -121,6 +122,7 @@ export default function ContactPage() {
       </div>
       <NavBar />
       <HambMenu />
+      <DisplayEmail/>
       <div id="contact" className="kioto_tm_section">
         <div className="container">
           <div className="kioto_tm_contact">

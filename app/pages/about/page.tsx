@@ -14,6 +14,7 @@ import instagramImage from "@/app/assets/images/instagram.svg"
 import facebookImage from "@/app/assets/images/facebook.svg"
 import tiktokImage from "@/app/assets/images/tik-tok.svg"
 import DownloadButton from "@/app/components/downloadButton";
+import DisplayEmail from "@/app/components/displayEmail";
 
 export default function About () {
 
@@ -28,6 +29,7 @@ export default function About () {
       </div>
       <NavBar />
       <HambMenu/>
+      <DisplayEmail/>
       <div id="about" className="kioto_tm_section">
         <div className="container">
           <div className="kioto_tm_about">

@@ -5,6 +5,7 @@ import HambMenu from "@/app/components/hambMenu"
 import bookImage from "@/app/assets/images/bookapp.png"
 import fitnessImage from "@/app/assets/images/fitness.png"
 import recipesImage from "@/app/assets/images/recipes.png"
+import DisplayEmail from "@/app/components/displayEmail"
 
 export default function RecentWork() {
   return (
@@ -16,6 +17,7 @@ export default function RecentWork() {
       </div>
       <NavBar />
       <HambMenu />
+      <DisplayEmail/>
       <div id="portfolio" className="kioto_tm_section">
         <div className="container">
           <div className="kioto_tm_portfolio">

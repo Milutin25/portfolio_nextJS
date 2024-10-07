@@ -4,6 +4,7 @@ import Cursor from "@/app/components/cursor";
 import NavBar from "@/app/components/navBar";
 import HambMenu from "@/app/components/hambMenu";
 import { FilterBlogs } from "@/app/components/filterBlogs";
+import UserEmail from "../components/userEmail";
 
 interface Blog {
   _id: string;
@@ -39,6 +40,8 @@ const TAG_QUERY = (tag: string) => {
 };
 
 export default async function IndexPage() {
+  
+
   const allBlogs: Blog[] = await client.fetch(BLOG_QUERY, {}, options);
   const frontEndBlogs: Blog[] = await client.fetch(
     TAG_QUERY("Front End"),
@@ -65,6 +68,7 @@ export default async function IndexPage() {
       </div>
       <NavBar />
       <HambMenu />
+      <UserEmail/>
       <div className="kioto_tm_section">
         <div className="container">
           <div className="kioto_tm_title pt-20 pb-10">
