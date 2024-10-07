@@ -63,7 +63,7 @@ export default function NavBar() {
             )}
             {isLoggedIn && (
               <li>
-                <button onClick={handleLogout}>Logout</button>
+                <button className="logoutButton" onClick={handleLogout}>Logout</button>
               </li>
             )}
           </ul>
